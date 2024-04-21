@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { getDetail } from "../api/api";
 import Spinner from "../Loader/Spinner";
 import Detail from "../components/product/Detail";
+import RelatedProduct from "../components/product/RelatedProduct";
 
 const ProductDetail = () => {
   const [detail, setDetail] = useState();
@@ -27,6 +28,7 @@ const ProductDetail = () => {
   return (
     <div className="mt-20 max-w-[1200px] mx-auto">
       <div>{load ? <Spinner /> : <Detail detail={detail} />}</div>
+      <RelatedProduct detail={detail} />
     </div>
   );
 };

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const ProductInfo = ({ product }) => {
   return (
     <div>
-      <div className="h-[300px] sm:h-[400px] w-[184px] sm:w-[268px] rounded-lg shadow-slate-400 shadow-md">
+      <div className="h-[300px] sm:h-[400px] w-[184px] sm:w-[268px] rounded-lg shadow-slate-400 shadow-md hover:shadow-lg hover:scale-[1.025] transition ease-in-out duration-300 hover:shadow-[#E0B1CB]">
         <div className="">
-          <Link to={`/ProductDetail/${product.id}`}>
+          <Link to={`/Products/ProductDetail/${product.id}`}>
             <img
               src={product.thumbnail}
               alt={product.title}
@@ -16,8 +16,8 @@ const ProductInfo = ({ product }) => {
         </div>
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-xl font-medium mt-3">
-            <Link to={`/ProductDetail/${product.id}`}>
-              {product.title.length > 17
+            <Link to={`/Products/ProductDetail/${product.id}`}>
+              {product.title.length > 15
                 ? product.title.slice(0, 17)
                 : product.title}
             </Link>

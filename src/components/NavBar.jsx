@@ -3,7 +3,7 @@ import { BsCart3 } from "react-icons/bs";
 
 const NavBar = () => {
   return (
-    <div className="w-full h-20 bg-[#231942] text-[#E0B1CB] fixed top-0 z-10">
+    <div className="w-full h-20 bg-[#231942fb] text-[#E0B1CB] fixed top-0 z-10">
       <nav className="flex items-center justify-between max-w-[1200px] mx-auto px-3 h-20">
         <NavLink to="/">
           <h1 className="text-2xl font-lg">ShopBits</h1>
