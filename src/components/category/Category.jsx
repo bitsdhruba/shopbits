@@ -41,14 +41,14 @@ const Category = () => {
               Browse All Categories
             </h1>
           </div>
-          <div className="flex flex-wrap gap-4 justify-center sm:gap-8">
+          <div className="flex flex-wrap gap-4 justify-center sm:gap-8 my-12">
             {category?.map((item, i) => {
               return (
-                <Link to={`/Category/${item}`} key={i}>
+                <Link to={`/Category/${item.slug}`} key={i}>
                   <div className="w-[373px] h-[120px] rounded-lg bg-gradient-to-t from-[#E0B1CB] shadow-lg shadow-slate-300 transition ease-in-out duration-300 hover:scale-105 hover:shadow-slate-400 ">
                     <div className="w-full h-full flex flex-col hover:justify-end transition ease-in-out duration-700 hover:scale-105">
                       <h1 className="text-2xl text-[#5E548E] m-4 font-mono font-medium">
-                        {item}
+                        {item.name}
                       </h1>
                     </div>
                   </div>
